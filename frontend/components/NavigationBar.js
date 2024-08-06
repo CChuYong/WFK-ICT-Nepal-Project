@@ -14,7 +14,7 @@ export default function NavigationBar() {
                     Free Board
                 </Link>
                 <div className="flex items-center gap-2">
-                    <Link href="#" className="hover:underline" prefetch={false}>
+                    <Link href="login" className="hover:underline" prefetch={false}>
                         Login
                     </Link>
                     <Link
