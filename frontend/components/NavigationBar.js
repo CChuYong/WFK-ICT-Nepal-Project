@@ -7,7 +7,7 @@ export default function NavigationBar() {
                 School Public Website
             </Link>
             <nav className="flex items-center gap-6">
-                <Link href="#" className="hover:underline" prefetch={false}>
+                <Link href="/notices" className="hover:underline" prefetch={false}>
                     School Notice
                 </Link>
                 <Link href="#" className="hover:underline" prefetch={false}>
