@@ -23,10 +23,10 @@ export default function NewNotice() {
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-4xl font-bold mb-8">새 공지사항 작성</h1>
+      <h1 className="text-4xl font-bold mb-8">Write New Notice</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-lg font-bold mb-2">제목</label>
+          <label className="block text-lg font-bold mb-2">Headline</label>
           <input
             type="text"
             value={title}
@@ -36,7 +36,7 @@ export default function NewNotice() {
           />
         </div>
         <div className="mb-6">  {/* 제목과 내용 사이의 공백을 추가합니다. */}
-          <label className="block text-lg font-bold mb-2">내용</label>
+          <label className="block text-lg font-bold mb-2">Content</label>
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
@@ -46,7 +46,7 @@ export default function NewNotice() {
           />
         </div>
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-          저장
+          Wirte
         </button>
       </form>
     </div>
