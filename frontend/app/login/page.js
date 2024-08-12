@@ -1,11 +1,25 @@
 "use client";
 import {useState} from "react";
+import {serverUrl} from "@/utils/constant";
+import axios from "@/utils/axios";
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const doLogin = () => {
-        alert('hi');
+    const doLogin = async () => {
+        try {
+            const res = await axios.post(serverUrl('auth/login'), {username, password});
+            if (res.status == 200) {
+                window.location.href = '/';
+            }
+        } catch(e) {
+            if (e.response.status == 403) {
+                alert('Login failed');
+            } else {
+                alert('unknown error');
+            }
+        }
+
     }
     return (
         <div className="flex items-center justify-center min-h-screen">
