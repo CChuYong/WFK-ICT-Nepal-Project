@@ -4,9 +4,8 @@ Axios.interceptors.response.use((res) => {
     return Promise.resolve(res);
 }, (error) => {
     console.log(error.config.url);
-    if (error!= null && error.status == 403) {
+    if (error.status === 403) {
         window.location.href = '/login';
-
     }
     return Promise.reject(error);
 })
